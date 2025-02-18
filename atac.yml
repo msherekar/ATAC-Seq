@@ -1,0 +1,71 @@
+name: atac
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - defaults
+
+dependencies:
+  # Core dependencies
+  - python=3.9
+  - numpy
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - fastapi
+  - uvicorn
+  - colorama
+  - biopython
+
+  # 1️⃣ Preprocessing & Quality Control
+  - fastqc
+  - trim-galore
+  - cutadapt
+  - bowtie2
+  - bwa
+  - samtools
+  - picard
+
+  # 2️⃣ Peak Calling
+  - macs2  # Now available in bioconda
+  - homer  # Now available in bioconda
+
+  # 3️⃣ Peak Annotation & Functional Analysis
+  - bedtools
+  - deeptools=3.5.2  # Compatible with `pysam`
+  - bioconductor-chipseeker
+
+  # 4️⃣ Differential Accessibility Analysis
+  - r-base=4.1.0  # Compatible Bioconductor version
+  - bioconductor-deseq2
+  - bioconductor-edger
+  - bioconductor-diffbind
+
+  # 🔬 Machine Learning / Deep Learning
+  - pytorch
+  - torchvision
+  - torchaudio
+  - xgboost
+
+  # Development tools
+  - black
+  - isort
+  - flake8
+  - mypy
+  - pytest
+  - coverage
+  - tox
+  - nbstripout
+
+  # Pip-only dependencies
+  - pip
+  - pip:
+      - pre-commit
+      - pytest-cov
+      - httpx
+      - rich
+      - tobias  # Not in Conda, install via pip
+      - meme-suite  # MEME motif analysis
+      - genrich  # ATAC-Seq peak caller

@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# config files
+*.env
+*.json
+
+# specific files
+config.py
+
+# folder
+data/
+output/
+logs/
+tests/
+atac_venv/

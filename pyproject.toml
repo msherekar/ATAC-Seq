@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atacseq"
+version = "0.0.1"
+description =  " A pipeline for ATAC-Seq data processing for AI"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "biopython",
+    "pybedtools",
+    "deeptools",
+    "macs2",
+    "pybigwig",
+    "cutadapt",
+    "pysam",
+    "tobias",
+    "rich",
+    "httpx",
+    "requests",
+    "boto3",
+    "termcolor",
+    "colorama",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+
+# entry point script
+[project.scripts]
+run-streaming = "atacseq.streaming.__main__:main"
+run-processing = "atacseq.processing.__main__:main"
+atacseq = "atacseq.__main__:main"
+
+
+# when changes in .toml, pip install again
+#source atac_venv/bin/activate
+
+# python -m pip install -e .
+#/Users/mukulsherekar/yes/lib/python3.12/site-packages (2.32.3)

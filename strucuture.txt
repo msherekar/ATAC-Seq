@@ -1,0 +1,28 @@
+atacseq-project/
+│── pyproject.toml
+│── requirements.txt
+│── Dockerfile
+│── Makefile
+│── data/
+│── output/
+│── logs/
+│── tests/
+│── src/
+│   │── atacseq/
+│   │   ├── __init__.py
+│   │   ├── __main__.py  # Main entry point for atacseq CLI
+│   │   ├── config.py
+│   │   ├── api.py
+│   │   ├── utils.py
+│   │   ├── streaming/
+│   │   │   ├── __init__.py
+│   │   │   ├── __main__.py  # Runs streaming pipeline
+│   │   │   ├── encode_fetch.py
+│   │   │   ├── s3_upload.py
+│   │   │   ├── downloader.py
+│   │   ├── processing/
+│   │   │   ├── __init__.py
+│   │   │   ├── __main__.py  # Runs processing pipeline
+│   │   │   ├── preprocessing.py
+│   │   │   ├── analysis.py
+│   │   │   ├── models.py
